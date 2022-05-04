@@ -11,7 +11,7 @@ export class FeedbackService implements FeedbackCreatFunc, FeedbackSendEmailfunc
     }
   });
   constructor(private model: FeedbackCreatFunc) { }
-   validateFeedbackData({ type, comment, screenshot }: FeedbackToEmail) {
+   private validateFeedbackData({ type, comment, screenshot }: FeedbackToEmail) {
     if (!type) throw new Error('type not be empty')
     if (!comment) throw new Error('comment not be empty')
     if (screenshot && !screenshot?.startsWith('data:image/png;64')) {
