@@ -11,7 +11,7 @@ export class FeedbackService implements FeedbackCreatFunc, FeedbackSendEmailfunc
     }
   });
   constructor(private model: FeedbackCreatFunc) { }
-   private validateFeedbackData({ type, comment, screenshot }: FeedbackToEmail) {
+  private validateFeedbackData({ type, comment, screenshot }: FeedbackToEmail) {
     if (!type) throw new Error('type not be empty')
     if (!comment) throw new Error('comment not be empty')
     if (screenshot && !screenshot?.startsWith('data:image/png;64')) {
@@ -22,7 +22,7 @@ export class FeedbackService implements FeedbackCreatFunc, FeedbackSendEmailfunc
     this.validateFeedbackData(data)
     return await this.model.createFeedback(data)
   }
-  async sendEmail({ type, comment }: FeedbackToEmail) {
+  async sendEmail({ type, comment, screenshot }: FeedbackToEmail) {
     this.validateFeedbackData({ type, comment })
 
     await this.transport.sendMail({
@@ -33,6 +33,7 @@ export class FeedbackService implements FeedbackCreatFunc, FeedbackSendEmailfunc
         `<div style="font-family:sans-serif; font-size: 16px; color:#111;">`,
         `<p>Tipo do Feedback: ${type}</p>`,
         `<p>Comentario: ${comment}</p>`,
+        screenshot && `<img src="${screenshot}"/>`,
         `</div>`
       ].join('\n')
     })
