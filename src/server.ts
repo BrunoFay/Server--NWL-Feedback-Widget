@@ -6,7 +6,7 @@ import { handleErrors } from './middlewares/handleErrors'
 const app = express()
 const PORT = process.env.PORT || 3333
 
-app.use(cors({/* origin:'page adress' */ }))
+app.use(cors({ origin: process.env.FRONT_URL }))
 app.use(express.json())
 app.use(feedbackRoute)
 
