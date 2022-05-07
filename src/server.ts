@@ -10,7 +10,7 @@ app.use(cors({
   origin: 'https://nlw-feedback-widget-1l32u0v6a-brunofay.vercel.app/'
 }))
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://nlw-feedback-widget-1l32u0v6a-brunofay.vercel.app/");
+  res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 app.use(express.json())
