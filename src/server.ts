@@ -6,8 +6,13 @@ import { handleErrors } from './middlewares/handleErrors'
 const app = express()
 const PORT = process.env.PORT || 3333
 
- app.use(cors()) 
-
+app.use(cors({
+  origin: 'https://nlw-feedback-widget-1l32u0v6a-brunofay.vercel.app/'
+}))
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://nlw-feedback-widget-1l32u0v6a-brunofay.vercel.app/");
+  next();
+});
 app.use(express.json())
 app.use(feedbackRoute)
 
