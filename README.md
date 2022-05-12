@@ -12,7 +12,6 @@ It was developed using typescript, SOLID principles and unit tests with Jest.
 - Express
 - Prisma
 - Jest
-- Html2canvas
 - Nodemailer
 - Heroku (deploy)
 
