@@ -14,7 +14,7 @@ export class FeedbackService implements FeedbackCreatFunc, FeedbackSendEmailfunc
   private validateFeedbackData({ type, comment, screenshot }: FeedbackToEmail) {
     if (!type) throw new Error('type not be empty')
     if (!comment) throw new Error('comment not be empty')
-    if (screenshot && !screenshot?.startsWith('data:image/png;64')) {
+    if (screenshot && !screenshot?.startsWith('data:image/png;base64')) {
       throw new Error('invalid screenshot  format')
     }
   }
