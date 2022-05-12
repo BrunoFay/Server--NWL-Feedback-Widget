@@ -18,7 +18,7 @@ It was developed using typescript, SOLID principles and unit tests with Jest.
 
 
 ## To view a video of the project, click on the image below !
-[![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)]()
+[![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/-pZfgRbNHmM)
 
 
 
@@ -42,4 +42,4 @@ Foi desenvolvido usando texto datilografado, princípios SOLID e testes unitári
 
 
 ## Para ver um vídeo do projeto, clique na imagem abaixo!
-[![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)]()
+[![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/-pZfgRbNHmM)
